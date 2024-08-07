@@ -14,5 +14,6 @@ ColorPair GetColorFromPairNumber(int pairNumber);
 int GetPairNumberFromColor(const ColorPair* colorPair);
 void PrintColorCodingReference();
 
-#endif // COLOR_CODES_H
+#define MAX_COLORPAIR_NAME_CHARS 16  // Added constant definition
 
+#endif // COLOR_CODES_H
