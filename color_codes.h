@@ -1,5 +1,5 @@
-#ifndef COLOR_CODE_H
-#define COLOR_CODE_H
+#ifndef COLOR_CODES_H
+#define COLOR_CODES_H
 
 // Enum definitions
 enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
