@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include <assert.h>
-#include "color_codes.h"
+#include <assert.h> 
+#include "Color_Code.h"
 
-void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
-{
+// Test conversion from number to ColorPair
+void testNumberToPair(int pairNumber, enum MajorColor expectedMajor, enum MinorColor expectedMinor) {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
     ColorPairToString(&colorPair, colorPairNames);
@@ -14,11 +12,8 @@ void testNumberToPair(int pairNumber,
     assert(colorPair.minorColor == expectedMinor);
 }
 
-void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
-    int expectedPairNumber)
-{
+// Test conversion from ColorPair to number
+void testPairToNumber(enum MajorColor major, enum MinorColor minor, int expectedPairNumber) {
     ColorPair colorPair;
     colorPair.majorColor = major;
     colorPair.minorColor = minor;
@@ -28,14 +23,14 @@ void testPairToNumber(
 }
 
 int main() {
+    // Print the color coding manual
+    printColorCodingManual();
+
+    // Testing the conversion functions
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
-
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
-
-    // Print the color coding reference
-    PrintColorCodingReference();
 
     return 0;
 }
