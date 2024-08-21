@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Color_Code.h"
+#include "color_codes.h"
 
 // Enum arrays
 const char* MajorColorNames[] = {
