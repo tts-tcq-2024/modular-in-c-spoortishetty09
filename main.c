@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h> 
-#include "Color_Code.h"
+#include "color_codes.h"
 
 // Test conversion from number to ColorPair
 void testNumberToPair(int pairNumber, enum MajorColor expectedMajor, enum MinorColor expectedMinor) {
